@@ -31,12 +31,12 @@ const PHASES = [
     lines: [
       { t: "line", text: "„Was passiert konkret wenn fünf Anrufe gleichzeitig reinkommen?“" },
       { t: "line", text: "„Wenn keiner drangeht — ruft der Gast nochmal an oder ist der weg?“" },
-      { t: "line", text: "„Wie viele Reservierungen verlierst du geschätzt pro Woche?“" },
-      { t: "line", text: "„Was ist ein durchschnittlicher Tisch bei euch wert?“" },
+      { t: "line", text: "„Wie viele Anfragen verlierst du geschätzt pro Woche?“" },
+      { t: "line", text: "„Was ist eine durchschnittliche Anfrage (z.B. Catering/Tisch) bei euch wert?“" },
       { t: "schweigen", text: "← Lass ihn rechnen. Seine Zahl hat zehnmal mehr Gewicht als deine." },
       { t: "pflicht", text: "„Warum glaubst du passiert das überhaupt? Was ist die eigentliche Ursache?“ (Orlob Pflichtfrage)" },
       { t: "schweigen", text: "← Schweigen. Wirklich schweigen." },
-      { t: "line", text: "„Wie sehr beschäftigt dich das — wenn du weißt dass Gäste nicht reinkommen weil niemand drangegangen ist?“" },
+      { t: "line", text: "„Wie sehr beschäftigt dich das — wenn du weißt dass Gäste nicht durchkommen weil niemand drangegangen ist?“" },
       { t: "line", text: "„Wenn sich das nicht ändert — wo stehst du in zwölf Monaten?“" }
     ],
     gate: "Kann ich seinen Pain präziser beschreiben als Sascha selbst?",
@@ -46,7 +46,7 @@ const PHASES = [
     id: 3, start: 9, ck: "warning",
     label: "Summarize", time: "09:00 – 11:30",
     lines: [
-      { t: "line", text: "„Lass mich sichergehen dass ich das richtig verstanden hab. Du hast 5 Leute die täglich im Service stecken. Das Telefon klingelt oft — keiner geht ran. Du verlierst pro Woche [SEINE ZAHL] Reservierungen. Der Grund ist nicht dass dein Team schlecht ist — sie können nicht 2 Jobs gleichzeitig machen. Hab ich das richtig getroffen?“" },
+      { t: "line", text: "„Lass mich sichergehen dass ich das richtig verstanden hab. Du hast 5 Leute die täglich im Service stecken. Das Telefon klingelt oft — keiner geht ran. Du verlierst pro Woche [SEINE ZAHL] Anfragen. Der Grund ist nicht dass dein Team schlecht ist — sie können nicht 2 Jobs gleichzeitig machen. Hab ich das richtig getroffen?“" },
       { t: "schweigen", text: "← Warten. Nicht weitermachen bis er aktiv bestätigt." },
       { t: "pflicht", text: "„Ist das DAS eine Thema gerade — oder gibt es etwas das dich noch mehr beschäftigt?“" }
     ],
@@ -57,7 +57,7 @@ const PHASES = [
     id: 4, start: 11.5, ck: "info",
     label: "Future Viz", time: "11:30 – 14:30",
     lines: [
-      { t: "line", text: "„Stell dir vor es ist nächster Montag früh. Dein Team kommt rein. Die Anrufe vom Wochenende — alle beantwortet. Reservierungen gebucht. Öffnungszeiten geklärt. Dein Team macht nur das wofür du sie bezahlst: Gäste empfangen, Kaffee machen. Was verändert das für dich?“" },
+      { t: "line", text: "„Stell dir vor es ist nächster Montag früh. Dein Team kommt rein. Die Anrufe vom Wochenende — alle beantwortet. Routine-Fragen zum Menü sind geklärt. Wichtige Anfragen liegen sauber mit Kontaktdaten sortiert in deinem Postfach. Dein Team macht nur das wofür du sie bezahlst: Gäste empfangen, Kaffee machen. Was verändert das für dich?“" },
       { t: "schweigen", text: "← Lass ihn antworten." },
       { t: "painanker", text: "„fonio ersetzt nicht dein Team. Es ist der Puffer zwischen der Außenwelt und deinen Menschen — damit deine Menschen dort sind wo sie echten Wert bringen.“" },
       { t: "line", text: "„Du hast gerade beschrieben wie dein Café funktioniert wenn kein Anruf mehr verloren geht. Was wäre der erste Schritt den wir heute gemeinsam in die Hände nehmen?“" }
@@ -79,11 +79,11 @@ const PHASES = [
     label: "Co-Creation", time: "15:00 – 24:00",
     lines: [
       { t: "pflicht", text: "„Sascha, öffne deinen Browser. Ich schick dir den Setup-Link. Wir bauen das jetzt in unter 10 Minuten auf.“" },
-      { t: "line", text: "Schritt 1 (Wissen): „Gib deine Website ein. fonio zieht sich jetzt automatisch euer Menü und die Öffnungszeiten.“" },
+      { t: "line", text: "Schritt 1 (Inhaltliche Fragen): „Gib deine Website ein. fonio lernt jetzt automatisch euer Menü und eure Infos, um Kundenfragen sofort selbst zu beantworten.“" },
       { t: "line", text: "Schritt 2 (Begrüßung): „Wähl mal eine Stimme. Wie soll sie sich melden? 'Hallo, Coffee Shop...'?“" },
-      { t: "line", text: "Schritt 3 (Routing): „Wir tippen in den Prompt: Allgemeine Fragen beantworten. Catering direkt per E-Mail an dich weiterleiten.“" },
-      { t: "painanker", text: "„Inwiefern löst genau das den Schmerz mit den verlorenen Reservierungen von vorhin?“ (Orlob Frage)" },
-      { t: "line", text: "Schritt 4 (Härtetest): „Lass uns das live testen. Ruf mal diese Testnummer an und sei ruhig der nervigste Kunde, den du dir vorstellen kannst.“" },
+      { t: "line", text: "Schritt 3 (Routing & Kontakte): „Wir tippen in den Prompt: 'Wenn eine spezielle Anfrage reinkommt, frage nach Name und Nummer und leite die Details sofort per E-Mail an Sascha weiter.'“" },
+      { t: "painanker", text: "„Inwiefern löst genau das den Schmerz mit den Anfragen, die bisher im Alltagsstress untergehen?“ (Orlob Frage)" },
+      { t: "line", text: "Schritt 4 (Härtetest): „Lass uns das live testen. Ruf mal an, frag nach eurem Kaffee und hinterlass deine Kontaktdaten für eine große Bestellung.“" },
       { t: "pflicht", text: "← STARKE IN-DEMO FRAGEN STATT FEATURE-PITCHING:" },
       { t: "line", text: "„Wie schneidet das im Vergleich zu dem ab, wie ihr das heute löst?“ (LaManna / Orlob)" },
       { t: "line", text: "„Wenn du das siehst — wie stellst du dir vor, dass dein Team das morgen nutzt?“ (Orlob)" },
@@ -97,7 +97,7 @@ const PHASES = [
     label: "Close", time: "24:00 – 30:00",
     lines: [
       { t: "line", text: "„Wir haben das gerade gemeinsam aufgebaut. Lass uns das heute aktivieren.“" },
-      { t: "line", text: "„Wenn fonio euch im Monat nur eine einzige dieser verpassten Reservierungen rettet — zahlt sich das Abo von selbst.“" },
+      { t: "line", text: "„Wenn fonio euch im Monat nur eine einzige dieser verpassten Anfragen rettet — zahlt sich das Abo von selbst.“" },
       { t: "line", text: "„Dreißig Tage Geld zurück. Das Risiko liegt komplett bei uns.“" },
       { t: "schweigen", text: "← Schweigen." },
       { t: "pflicht", text: "„Sascha, klick auf 'Zahlung'. Du siehst ein Stripe-Fenster — verschlüsselt. Dein Account ist sofort live danach.“" },
