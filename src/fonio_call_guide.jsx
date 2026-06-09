@@ -78,15 +78,19 @@ const PHASES = [
     id: 6, start: 15, ck: "danger",
     label: "Co-Creation", time: "15:00 – 24:00",
     lines: [
-      { t: "pflicht", text: "„Sascha, öffne mal deinen Browser. Ich schick dir deinen persönlichen Setup-Link.“" },
-      { t: "line", text: "Schritt 1: „Gib deine Website-URL ein — fonio pulled automatisch deine Öffnungszeiten und Speisekarte.“" },
-      { t: "line", text: "Schritt 2: „Jetzt kommt der Prompt. Wir schreiben: 'Wenn es um Catering oder große Reservierungen geht, leite an Sascha weiter.' Das ist deine Nummer?“" },
-      { t: "painanker", text: "„Das ist genau der Punkt den du vorhin erwähnt hast — die Catering-Anfragen die durchfallen.“" },
-      { t: "note", text: "Kalender: „Die Verknüpfung machen wir nicht live wegen privater Keys. Das ist ein 10-Minuten-Setup heute Abend. fonio funktioniert ab sofort auch ohne.“" },
-      { t: "line", text: "In-Demo Fragen: „Was hat am meisten rausgestochen?“ / „Siehst du wie das funktioniert?“" }
+      { t: "pflicht", text: "„Sascha, öffne deinen Browser. Ich schick dir den Setup-Link. Wir bauen das jetzt in unter 10 Minuten auf.“" },
+      { t: "line", text: "Schritt 1 (Wissen): „Gib deine Website ein. fonio zieht sich jetzt automatisch euer Menü und die Öffnungszeiten.“" },
+      { t: "line", text: "Schritt 2 (Begrüßung): „Wähl mal eine Stimme. Wie soll sie sich melden? 'Hallo, Coffee Shop...'?“" },
+      { t: "line", text: "Schritt 3 (Routing): „Wir tippen in den Prompt: Allgemeine Fragen beantworten. Catering direkt per E-Mail an dich weiterleiten.“" },
+      { t: "painanker", text: "„Inwiefern löst genau das den Schmerz mit den verlorenen Reservierungen von vorhin?“ (Orlob Frage)" },
+      { t: "line", text: "Schritt 4 (Härtetest): „Lass uns das live testen. Ruf mal diese Testnummer an und sei ruhig der nervigste Kunde, den du dir vorstellen kannst.“" },
+      { t: "pflicht", text: "← STARKE IN-DEMO FRAGEN STATT FEATURE-PITCHING:" },
+      { t: "line", text: "„Wie schneidet das im Vergleich zu dem ab, wie ihr das heute löst?“ (LaManna / Orlob)" },
+      { t: "line", text: "„Wenn du das siehst — wie stellst du dir vor, dass dein Team das morgen nutzt?“ (Orlob)" },
+      { t: "line", text: "„Was sticht für dich bisher am meisten heraus?“ (LaManna)" }
     ],
-    gate: "Baut er aktiv mit? Ist der Account angelegt?",
-    forbidden: ["„Macht das Sinn?“"]
+    gate: "Baut er aktiv mit? Wurde der Härtetest gemacht?",
+    forbidden: ["„Macht das Sinn?“", "Feature-Monologe"]
   },
   {
     id: 7, start: 24, ck: "danger",
